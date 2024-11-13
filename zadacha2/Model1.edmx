@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Хранилище Zadacha2Model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="Хранилище Zadadacha2Model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Comentariy_tabel">
           <Key>
             <PropertyRef Name="ID" />
@@ -55,16 +55,6 @@
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
-        </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="principal_id" Type="int" Nullable="false" />
-          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="version" Type="int" />
-          <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
         <EntityType Name="Users">
           <Key>
@@ -247,14 +237,13 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Хранилище Zadacha2ModelContainer">
+        <EntityContainer Name="Хранилище Zadadacha2ModelContainer">
           <EntitySet Name="Comentariy_tabel" EntityType="Self.Comentariy_tabel" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Orgtehnica" EntityType="Self.Orgtehnica" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Problem" EntityType="Self.Problem" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Status" EntityType="Self.Status" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Zadacha_zapchast" EntityType="Self.Zadacha_zapchast" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ZadachaZacasa" EntityType="Self.ZadachaZacasa" Schema="dbo" store:Type="Tables" />
@@ -312,7 +301,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="Zadacha2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="Zadadacha2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Comentariy_tabel">
           <Key>
             <PropertyRef Name="ID" />
@@ -376,16 +365,6 @@
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Orders" Relationship="Self.FK_Order_Status" FromRole="Status" ToRole="Order" />
-        </EntityType>
-        <EntityType Name="sysdiagram">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="version" Type="Int32" />
-          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -586,7 +565,6 @@
           <EntitySet Name="Problems" EntityType="Self.Problem" />
           <EntitySet Name="Roles" EntityType="Self.Role" />
           <EntitySet Name="Status" EntityType="Self.Status" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <EntitySet Name="Users" EntityType="Self.User" />
           <EntitySet Name="Zadacha_zapchast" EntityType="Self.Zadacha_zapchast" />
           <EntitySet Name="ZadachaZacasas" EntityType="Self.ZadachaZacasa" />
@@ -645,9 +623,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище Zadacha2ModelContainer" CdmEntityContainer="BDEntities">
+        <EntityContainerMapping StorageEntityContainer="Хранилище Zadadacha2ModelContainer" CdmEntityContainer="BDEntities">
           <EntitySetMapping Name="Comentariy_tabel">
-            <EntityTypeMapping TypeName="Zadacha2Model.Comentariy_tabel">
+            <EntityTypeMapping TypeName="Zadadacha2Model.Comentariy_tabel">
               <MappingFragment StoreEntitySet="Comentariy_tabel">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Comentariy" ColumnName="Comentariy" />
@@ -657,7 +635,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Orders">
-            <EntityTypeMapping TypeName="Zadacha2Model.Order">
+            <EntityTypeMapping TypeName="Zadadacha2Model.Order">
               <MappingFragment StoreEntitySet="Order">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Date" ColumnName="Date" />
@@ -672,7 +650,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Orgtehnicas">
-            <EntityTypeMapping TypeName="Zadacha2Model.Orgtehnica">
+            <EntityTypeMapping TypeName="Zadadacha2Model.Orgtehnica">
               <MappingFragment StoreEntitySet="Orgtehnica">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -680,7 +658,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Problems">
-            <EntityTypeMapping TypeName="Zadacha2Model.Problem">
+            <EntityTypeMapping TypeName="Zadadacha2Model.Problem">
               <MappingFragment StoreEntitySet="Problem">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -688,7 +666,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Roles">
-            <EntityTypeMapping TypeName="Zadacha2Model.Role">
+            <EntityTypeMapping TypeName="Zadadacha2Model.Role">
               <MappingFragment StoreEntitySet="Role">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -696,26 +674,15 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Status">
-            <EntityTypeMapping TypeName="Zadacha2Model.Status">
+            <EntityTypeMapping TypeName="Zadadacha2Model.Status">
               <MappingFragment StoreEntitySet="Status">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="Zadacha2Model.sysdiagram">
-              <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="definition" ColumnName="definition" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Users">
-            <EntityTypeMapping TypeName="Zadacha2Model.User">
+            <EntityTypeMapping TypeName="Zadadacha2Model.User">
               <MappingFragment StoreEntitySet="Users">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="RoleId" ColumnName="RoleId" />
@@ -727,7 +694,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Zadacha_zapchast">
-            <EntityTypeMapping TypeName="Zadacha2Model.Zadacha_zapchast">
+            <EntityTypeMapping TypeName="Zadadacha2Model.Zadacha_zapchast">
               <MappingFragment StoreEntitySet="Zadacha_zapchast">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="ZadachaId" ColumnName="ZadachaId" />
@@ -736,7 +703,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ZadachaZacasas">
-            <EntityTypeMapping TypeName="Zadacha2Model.ZadachaZacasa">
+            <EntityTypeMapping TypeName="Zadadacha2Model.ZadachaZacasa">
               <MappingFragment StoreEntitySet="ZadachaZacasa">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
@@ -748,7 +715,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Zapchasts">
-            <EntityTypeMapping TypeName="Zadacha2Model.Zapchast">
+            <EntityTypeMapping TypeName="Zadadacha2Model.Zapchast">
               <MappingFragment StoreEntitySet="Zapchast">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />

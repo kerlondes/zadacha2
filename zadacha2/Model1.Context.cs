@@ -38,7 +38,6 @@ namespace zadacha2
         public virtual DbSet<Problem> Problems { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<Status> Status { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Zadacha_zapchast> Zadacha_zapchast { get; set; }
         public virtual DbSet<ZadachaZacasa> ZadachaZacasas { get; set; }

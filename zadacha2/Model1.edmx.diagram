@@ -4,30 +4,29 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="669ae233e99d496b8f8c8bef05eaa557" Name="Diagram1">
-        <EntityTypeShape EntityType="Zadacha2Model.Comentariy_tabel" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Zadacha2Model.Order" Width="1.5" PointX="8.25" PointY="2.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="Zadacha2Model.Orgtehnica" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Zadacha2Model.Problem" Width="1.5" PointX="6" PointY="7.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="Zadacha2Model.Role" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="Zadacha2Model.Status" Width="1.5" PointX="6" PointY="9.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Zadacha2Model.sysdiagram" Width="1.5" PointX="0.75" PointY="8" IsExpanded="true" />
-        <EntityTypeShape EntityType="Zadacha2Model.User" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="Zadacha2Model.Zadacha_zapchast" Width="1.5" PointX="12.75" PointY="3.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="Zadacha2Model.ZadachaZacasa" Width="1.5" PointX="10.5" PointY="3.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Zadacha2Model.Zapchast" Width="1.5" PointX="10.5" PointY="1.125" IsExpanded="true" />
-        <AssociationConnector Association="Zadacha2Model.FK_Comentariy_tabel_Order" ManuallyRouted="false" />
-        <AssociationConnector Association="Zadacha2Model.FK_Comentariy_tabel_Users" ManuallyRouted="false" />
-        <AssociationConnector Association="Zadacha2Model.FK_Order_Orgtehnica" ManuallyRouted="false" />
-        <AssociationConnector Association="Zadacha2Model.FK_Order_Problem" ManuallyRouted="false" />
-        <AssociationConnector Association="Zadacha2Model.FK_Order_Status" ManuallyRouted="false" />
-        <AssociationConnector Association="Zadacha2Model.FK_Order_Users" ManuallyRouted="false" />
-        <AssociationConnector Association="Zadacha2Model.FK_Order_Users1" ManuallyRouted="false" />
-        <AssociationConnector Association="Zadacha2Model.FK_ZadachaZacasa_Order" ManuallyRouted="false" />
-        <AssociationConnector Association="Zadacha2Model.FK_Users_Role" ManuallyRouted="false" />
-        <AssociationConnector Association="Zadacha2Model.FK_ZadachaZacasa_Users" ManuallyRouted="false" />
-        <AssociationConnector Association="Zadacha2Model.FK_Zadacha_zapchast_ZadachaZacasa" ManuallyRouted="false" />
-        <AssociationConnector Association="Zadacha2Model.FK_Zadacha_zapchast_Zapchast" ManuallyRouted="false" />
+      <Diagram DiagramId="1481150cfe3742cda2e90487d8de08a7" Name="Diagram1">
+        <EntityTypeShape EntityType="Zadadacha2Model.Comentariy_tabel" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zadadacha2Model.Order" Width="1.5" PointX="8.25" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zadadacha2Model.Orgtehnica" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zadadacha2Model.Problem" Width="1.5" PointX="6" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zadadacha2Model.Role" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zadadacha2Model.Status" Width="1.5" PointX="6" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zadadacha2Model.User" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zadadacha2Model.Zadacha_zapchast" Width="1.5" PointX="12.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zadadacha2Model.ZadachaZacasa" Width="1.5" PointX="10.5" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zadadacha2Model.Zapchast" Width="1.5" PointX="10.5" PointY="1.125" IsExpanded="true" />
+        <AssociationConnector Association="Zadadacha2Model.FK_Comentariy_tabel_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="Zadadacha2Model.FK_Comentariy_tabel_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="Zadadacha2Model.FK_Order_Orgtehnica" ManuallyRouted="false" />
+        <AssociationConnector Association="Zadadacha2Model.FK_Order_Problem" ManuallyRouted="false" />
+        <AssociationConnector Association="Zadadacha2Model.FK_Order_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="Zadadacha2Model.FK_Order_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="Zadadacha2Model.FK_Order_Users1" ManuallyRouted="false" />
+        <AssociationConnector Association="Zadadacha2Model.FK_ZadachaZacasa_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="Zadadacha2Model.FK_Users_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="Zadadacha2Model.FK_ZadachaZacasa_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="Zadadacha2Model.FK_Zadacha_zapchast_ZadachaZacasa" ManuallyRouted="false" />
+        <AssociationConnector Association="Zadadacha2Model.FK_Zadacha_zapchast_Zapchast" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
