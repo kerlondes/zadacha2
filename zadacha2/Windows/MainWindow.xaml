@@ -1,0 +1,15 @@
+﻿<Window x:Class="Разработка_программного_модуля_для_учета_заявок_на_ремонт_оргтехники.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Разработка_программного_модуля_для_учета_заявок_на_ремонт_оргтехники"
+        mc:Ignorable="d"
+        Title="Главное окно" Height="600" Width="900">
+
+    <!-- Основной фон окна и его стили -->
+    <Grid Background="#F4E8D3">
+        <!-- Основной контейнер для Frame -->
+        <Frame x:Name="mainFrame" />
+    </Grid>
+</Window>

@@ -1,0 +1,37 @@
+﻿<Page x:Class="Разработка_программного_модуля_для_учета_заявок_на_ремонт_оргтехники.Pages.MasterPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Разработка_программного_модуля_для_учета_заявок_на_ремонт_оргтехники.Pages"
+      mc:Ignorable="d"
+      Title="Личный кабинет мастера" Height="425" Width="780">
+
+    <Grid Background="#F4E8D3" Margin="10">
+        <!-- Заголовок страницы -->
+        <Label Content="Личный кабинет мастера" HorizontalAlignment="Center" FontSize="36" Foreground="#333333" Margin="0,0,0,20"/>
+
+        <!-- DataGrid для заявок, остаётся на месте -->
+        <DataGrid x:Name="requestsDataGrid" AutoGenerateColumns="False" HorizontalAlignment="Center" VerticalAlignment="Top" Height="137" Width="740" Margin="0,50,0,0" SelectionMode="Single"
+                  Background="White" BorderBrush="#D3D3D3" BorderThickness="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding ID}" Width="30"/>
+                <DataGridTextColumn Header="Модель" Binding="{Binding Model}" Width="*"/>
+                <DataGridTextColumn Header="Дата начала" Binding="{Binding Date}" Width="*"/>
+                <DataGridTextColumn Header="Статус" Binding="{Binding Status.Name}" Width="300"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!-- Поле для комментариев и кнопка "Отремонтировано" -->
+        <Label Content="Поле для ваших комментариев" HorizontalAlignment="Left" Margin="404,269,0,0" VerticalAlignment="Top" Foreground="#333333"/>
+        <TextBox x:Name="commentsTextBox" Width="346" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="404,295,0,0" MaxLength="50" Background="White" BorderBrush="#D3D3D3" BorderThickness="1"/>
+        <Button x:Name="completeRepairButton" Content="Отремонтировано" Width="346" Height="47" FontSize="24" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                Margin="404,226,0,0" Background="#67BA80" Foreground="White" BorderBrush="#67BA80" Click="CompleteRepairButton_Click"/>
+
+        <!-- Информация о деталях и кнопка "Добавить" -->
+        <Label Content="Вы нашли неисправную деталь? Выберите её и нажмите 'Добавить'!" HorizontalAlignment="Left" Margin="10,187,0,0" VerticalAlignment="Top" Foreground="#333333"/>
+        <ListBox x:Name="partsListBox" Width="389" Height="137" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,213,0,0" DisplayMemberPath="Name" Background="White" BorderBrush="#D3D3D3" BorderThickness="1"/>
+        <Button x:Name="addPartButton" Content="Добавить" Width="389" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,355,0,0" 
+                Background="#67BA80" Foreground="White" BorderBrush="#67BA80" FontWeight="Bold" Click="AddPartButton_Click"/>
+    </Grid>
+</Page>

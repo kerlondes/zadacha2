@@ -1,0 +1,50 @@
+﻿<Page x:Class="Разработка_программного_модуля_для_учета_заявок_на_ремонт_оргтехники.Pages.ClientPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Разработка_программного_модуля_для_учета_заявок_на_ремонт_оргтехники.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Личный кабинет клиента">
+
+    <Grid Background="#F4E8D3">
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Width="750" Margin="0,20,0,0">
+            <!-- Заголовок -->
+            <Label Content="Личный кабинет клиента" HorizontalAlignment="Center" FontSize="36" Foreground="#333333" Margin="0,0,0,20"/>
+
+            <!-- Панель фильтров и поиска -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="750" Margin="0,0,0,20">
+                <StackPanel Width="250" Margin="0,0,10,0">
+                    <Label Content="Фильтрация по проблеме" Foreground="#333333"/>
+                    <ComboBox x:Name="filterComboBox" Width="250" SelectionChanged="filterComboBox_SelectionChanged"/>
+                </StackPanel>
+                <StackPanel Width="250" Margin="10,0,0,0">
+                    <Label Content="Фильтрация по номеру заказа" Foreground="#333333"/>
+                    <TextBox x:Name="searchTextBox" Width="250" Height="22" TextChanged="searchTextBox_TextChanged" PreviewTextInput="searchTextBox_PreviewTextInput"/>
+                </StackPanel>
+            </StackPanel>
+
+            <!-- DataGrid для заявок -->
+            <DataGrid x:Name="requestsDataGrid" HorizontalAlignment="Center" Width="750" Height="250" Margin="0,10,0,20" AutoGenerateColumns="False" Background="White" BorderBrush="#D3D3D3" BorderThickness="1">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Width="*" Header="Дата создания" Binding="{Binding Date}"/>
+                    <DataGridTextColumn Width="*" Header="Дата выполнения" Binding="{Binding DateFin}"/>
+                    <DataGridTextColumn Width="*" Header="Вид техники" Binding="{Binding Orgtehnica.Name}"/>
+                    <DataGridTextColumn Width="*" Header="Модель" Binding="{Binding Model}"/>
+                    <DataGridTextColumn Width="*" Header="Статус заявки" Binding="{Binding Status.Name}"/>
+                    <DataGridTextColumn Width="*" Header="Проблема" Binding="{Binding Problem.Name}"/>
+                    <DataGridTextColumn Width="250" Header="Работник принявший заявку" Binding="{Binding Users.FIO}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <!-- Панель кнопок действий -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="750" Margin="0,10,0,0">
+                <Button x:Name="addRequestButton" Content="Добавить заявку" Width="250" Height="40" Margin="0,0,10,0" Click="AddRequestButton_Click"
+                        Background="#67BA80" Foreground="White" BorderBrush="#67BA80" FontWeight="Bold"/>
+                <Button x:Name="editRequestButton" Content="Редактировать" Width="250" Height="40" Click="EditRequestButton_Click"
+                        Background="#67BA80" Foreground="White" BorderBrush="#67BA80" FontWeight="Bold"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
